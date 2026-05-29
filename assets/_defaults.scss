@@ -23,6 +23,16 @@ $mobile-breakpoint: $menu-width + $body-min-width * 1.2 + $toc-width !default;
   --body-font-color: black;
 
   --border-radius: 0.25rem;
+
+  // Sidebar and header — override in theme mixins for colored sidebars
+  --sidebar-background: var(--body-background);
+  --sidebar-font-color: var(--body-font-color);
+  --sidebar-link-active-color: var(--color-link);
+  --sidebar-icon-filter: var(--icon-filter);
+  --sidebar-search-background: var(--gray-100);
+  --sidebar-search-border: var(--gray-200);
+  --header-background: var(--body-background);
+  --header-font-color: var(--body-font-color);
 }
 
 // Convenience mixing to declare a color and a transparent tint

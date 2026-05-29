@@ -189,3 +189,78 @@
     @include theme-ayu-dark;
   }
 }
+
+// CS50 theme — crimson sidebar (#a51c30), Bootstrap gray body palette
+// Colors sourced from furo50/__init__.py (ABD-01/furo50)
+
+@mixin theme-cs50-light {
+  --body-background: #fff;
+  --body-background-tint: none;
+  --body-font-color: #212529;
+  --color-link: #a51c30;
+  --color-visited-link: #a51c30;
+  --icon-filter: none;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-500: #adb5bd;
+
+  --sidebar-background: #a51c30;
+  --sidebar-font-color: #fff;
+  --sidebar-link-active-color: #fff;
+  --sidebar-icon-filter: brightness(0) invert(1);
+  --sidebar-search-background: rgba(255, 255, 255, 0.15);
+  --sidebar-search-border: rgba(255, 255, 255, 0.3);
+
+  --header-background: #a51c30;
+  --header-font-color: #fff;
+
+  @include accent("default", #a51c30);
+  @include accent("note", #4486dd);
+  @include accent("tip", #3bad3b);
+  @include accent("important", #8144dd);
+  @include accent("warning", #f59e42);
+  @include accent("caution", #d84747);
+  @include accent("info", #4486dd);
+  @include accent("success", #3bad3b);
+  @include accent("danger", #d84747);
+}
+
+@mixin theme-cs50-dark {
+  --body-background: #212529;
+  --body-background-tint: none;
+  --body-font-color: #dee2e6;
+  --color-link: #ef9aa4;
+  --color-visited-link: #ef9aa4;
+  --icon-filter: brightness(0) invert(1);
+  --gray-100: #343a40;
+  --gray-200: #495057;
+  --gray-500: #adb5bd;
+
+  --sidebar-background: #a51c30;
+  --sidebar-font-color: #fff;
+  --sidebar-link-active-color: #fff;
+  --sidebar-icon-filter: brightness(0) invert(1);
+  --sidebar-search-background: rgba(255, 255, 255, 0.15);
+  --sidebar-search-border: rgba(255, 255, 255, 0.3);
+
+  --header-background: #a51c30;
+  --header-font-color: #fff;
+
+  @include accent("default", #ef9aa4);
+  @include accent("note", #5e81ac);
+  @include accent("tip", #a3be8c);
+  @include accent("important", #b48ead);
+  @include accent("warning", #d08770);
+  @include accent("caution", #bf616a);
+  @include accent("info", #5e81ac);
+  @include accent("success", #a3be8c);
+  @include accent("danger", #bf616a);
+}
+
+@mixin theme-cs50 {
+  @include theme-cs50-light;
+
+  @media (prefers-color-scheme: dark) {
+    @include theme-cs50-dark;
+  }
+}

@@ -13,6 +13,9 @@
 // Custom defined styles, theme mixins also placed there
 @import "custom";
 
+// Optional theme plugins (contrast, catppuccin, ayu, cs50)
+@import "plugins/themes";
+
 // Select theme mixing based on site parameter
 :root {
   @include theme-{{ default "light" .Site.Params.BookTheme }};
